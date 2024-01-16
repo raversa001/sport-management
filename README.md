@@ -17,5 +17,10 @@ l'équipe, mais sans les joueurs.
 
 Dashboard qui bug?
 ### ✅ Partie 7 : Monitoring  | localhost:909{1-4}/actuator/
-### ❌ Partie 8 : Load Balancing 
+### ✅ Partie 8 : Load Balancing 
+
+Load balancing activé sur Player, qui se register 3 fois. 
+Lorsqu'on appelle depuis Team des URL de player on les appelle via player-service, sans donner de port.  
+Un des 3 ports déployés est alors choisi. Pour vérifier, voir la console de chacun des services.
+
 ### ❌ Partie 9 : Kubernetes 
