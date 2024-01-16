@@ -3,7 +3,6 @@ package org.sport.teamservice;
 import org.sport.playerservice.Player;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.client.RestOperations;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;

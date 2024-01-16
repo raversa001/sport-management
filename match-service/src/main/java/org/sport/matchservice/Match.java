@@ -1,4 +1,4 @@
-package org.sport.teamservice;
+package org.sport.matchservice;
 
 public class Match {
 

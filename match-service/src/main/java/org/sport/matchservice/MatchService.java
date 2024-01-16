@@ -1,4 +1,4 @@
-package org.sport.teamservice;
+package org.sport.matchservice;
 
 import org.springframework.stereotype.Service;
 import java.util.ArrayList;
