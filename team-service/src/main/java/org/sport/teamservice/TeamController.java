@@ -1,5 +1,6 @@
 package org.sport.teamservice;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.sport.playerservice.Player;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -7,6 +8,7 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -23,10 +25,21 @@ public class TeamController {
         teams.add(new Team(2L, "Équipe B", 3, 0, 2, 1, 1, 4));
     }
 
-    private void playerDown() {
+    private ResponseEntity<Team> playerServiceDown(Long id) {
+        Team team = teams.stream()
+                .filter(t -> t.getId().equals(id))
+                .findFirst()
+                .orElse(null);
 
+        if (team != null) {
+            // Set an empty list of players
+            team.setPlayers(Collections.emptyList());
+        }
+
+        return ResponseEntity.ok(team);
     }
 
+    @HystrixCommand(fallbackMethod = "playerServiceDown")
     @GetMapping("/{id}")
     public ResponseEntity<Team> getTeamDetails(@PathVariable Long id) {
         // Recherchez l'équipe avec l'ID correspondant à {id} dans votre liste d'équipes
