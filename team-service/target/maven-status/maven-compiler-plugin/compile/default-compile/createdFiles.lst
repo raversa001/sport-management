@@ -1,0 +1,5 @@
+org/sport/teamservice/Team.class
+org/sport/teamservice/TeamService.class
+org/sport/teamservice/TeamController.class
+org/sport/teamservice/TeamServiceApplication.class
+org/sport/teamservice/TeamServiceImpl.class
