@@ -1,14 +1,10 @@
 package org.sport.statsservice;
 
-import org.sport.playerservice.Player;
 import org.sport.statsservice.TeamStats;
 import org.sport.teamservice.Team;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-
-import java.util.Arrays;
-import java.util.List;
 
 @Service
 public class TeamStatsService {

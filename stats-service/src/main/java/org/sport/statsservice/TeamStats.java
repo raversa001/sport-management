@@ -1,9 +1,5 @@
 package org.sport.statsservice;
 
-import org.sport.playerservice.Player;
-
-import java.util.List;
-
 public class TeamStats {
     private Long teamId;
     private int matchesPlayed;

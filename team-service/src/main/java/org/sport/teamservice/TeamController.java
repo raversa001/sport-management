@@ -23,6 +23,10 @@ public class TeamController {
         teams.add(new Team(2L, "Équipe B", 3, 0, 2, 1, 1, 4));
     }
 
+    private void playerDown() {
+
+    }
+
     @GetMapping("/{id}")
     public ResponseEntity<Team> getTeamDetails(@PathVariable Long id) {
         // Recherchez l'équipe avec l'ID correspondant à {id} dans votre liste d'équipes

@@ -1,4 +1,4 @@
-package org.sport.eurekaserver;
+package org.sport.teamservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -2,8 +2,6 @@ package org.sport.teamservice;
 
 import org.sport.playerservice.Player;
 
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlElementWrapper;
 import java.util.List;
 
 public class Team {

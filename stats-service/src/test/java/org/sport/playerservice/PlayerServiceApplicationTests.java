@@ -1,4 +1,4 @@
-package org.sport.statsservice;
+package org.sport.playerservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
