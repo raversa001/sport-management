@@ -23,6 +23,7 @@ public class PlayerController {
 
     @GetMapping("/all")
     public ResponseEntity<List<Player>> getAllPlayers() {
+        System.out.println("I was called!");
         return ResponseEntity.ok(playerService.getAllPlayers());
     }
 

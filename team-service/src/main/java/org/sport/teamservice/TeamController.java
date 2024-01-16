@@ -2,6 +2,9 @@ package org.sport.teamservice;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.sport.playerservice.Player;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import org.springframework.context.annotation.Bean;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
@@ -17,7 +20,14 @@ import java.util.stream.Collectors;
 public class TeamController {
     public List<Team> teams = new ArrayList<>();
 
-    private static final String PLAYER_SERVICE_URL = "http://localhost:9092"; // URL du service Player
+    @LoadBalanced
+    @Bean
+    RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
+
+    private RestTemplate restTemplate;
+    private static final String PLAYER_SERVICE_URL = "http://player-service"; // URL du service Player
 
     public TeamController() {
         // Initialisation avec deux équipes de données lambda
@@ -26,6 +36,8 @@ public class TeamController {
     }
 
     private ResponseEntity<Team> playerServiceDown(Long id) {
+        System.out.println("Player service is down...");
+
         Team team = teams.stream()
                 .filter(t -> t.getId().equals(id))
                 .findFirst()
@@ -51,7 +63,6 @@ public class TeamController {
         if (team != null) {
             // Utilisez RestTemplate pour effectuer un appel GET au service Player pour récupérer la liste de tous les joueurs
             String playersUrl = PLAYER_SERVICE_URL + "/players/all";
-            RestTemplate restTemplate = new RestTemplate();
             Player[] allPlayersArray = restTemplate.getForObject(playersUrl, Player[].class);
 
             // Convertissez le tableau de joueurs en une liste

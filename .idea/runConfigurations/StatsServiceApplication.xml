@@ -1,0 +1,15 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="StatsServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+    <module name="stats-service" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="org.sport.statsservice.StatsServiceApplication" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="org.sport.statsservice.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
