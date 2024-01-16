@@ -7,17 +7,21 @@ import java.util.List;
 
 @Service
 public class PlayerService {
-
-    private List<Player> players = new ArrayList<>();
+    public List<Player> players = new ArrayList<>();
     private Long nextId = 1L;
 
     public Player getPlayerById(Long id) {
         for (Player player : players) {
             if (player.getId().equals(id)) {
+                System.out.println(player.getId());
                 return player;
             }
         }
         return null;
+    }
+
+    public List<Player> getAllPlayers() {
+        return players;
     }
 
     public Player addPlayer(Player player) {
