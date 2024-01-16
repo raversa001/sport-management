@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="player-service" />
+        <module name="match-service" />
         <module name="team-service" />
         <module name="eureka-server" />
         <module name="stats-service" />
@@ -16,6 +17,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="eureka-server" options="-parameters" />
+      <module name="match-service" options="-parameters" />
       <module name="player-service" options="-parameters" />
       <module name="stats-service" options="-parameters" />
       <module name="team-service" options="-parameters" />

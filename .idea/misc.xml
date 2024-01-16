@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/eureka-server/pom.xml" />
         <option value="$PROJECT_DIR$/player-service/pom.xml" />
         <option value="$PROJECT_DIR$/stats-service/pom.xml" />
+        <option value="$PROJECT_DIR$/match-service/pom.xml" />
       </list>
     </option>
     <option name="workspaceImportForciblyTurnedOn" value="true" />
