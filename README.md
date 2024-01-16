@@ -1,6 +1,9 @@
 # Sport Management
 
-Application CRUD avec 4 services différents qui communiquent entre eux.
+Application CRUD avec 4 services différents qui communiquent entre eux.  
+Fichiers de config IntelliJ présents dans chaque service..
+
+![img_1.png](img_1.png)
 
 ### ✅ Partie 0.5 : Eureka localhost:9090
 ### ✅ Partie 1 : Service d'Équipes | localhost:9091/teams
@@ -16,8 +19,11 @@ vers PlayerController, le circuit breaker est activé, et on retourne quand mêm
 l'équipe, mais sans les joueurs.  
 
 Dashboard qui bug?
+
 ### ✅ Partie 7 : Monitoring  | localhost:909{1-4}/actuator/
 ### ✅ Partie 8 : Load Balancing 
+
+![img.png](img.png)
 
 Load balancing activé sur Player, qui se register 3 fois. 
 Lorsqu'on appelle depuis Team des URL de player on les appelle via player-service, sans donner de port.  
