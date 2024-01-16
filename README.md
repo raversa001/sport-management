@@ -1,6 +1,6 @@
 # Sport Management
 
-*Application CRUD avec 4 services différents qui communiquent entre eux.**
+Application CRUD avec 4 services différents qui communiquent entre eux.
 
 ### ✅ Partie 0.5 : Eureka localhost:9090
 ### ✅ Partie 1 : Service d'Équipes | localhost:9091/teams
