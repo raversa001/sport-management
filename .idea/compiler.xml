@@ -6,9 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="player-service" />
         <module name="team-service" />
         <module name="eureka-server" />
-        <module name="player-service" />
+        <module name="stats-service" />
       </profile>
     </annotationProcessing>
   </component>
@@ -16,6 +17,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="eureka-server" options="-parameters" />
       <module name="player-service" options="-parameters" />
+      <module name="stats-service" options="-parameters" />
       <module name="team-service" options="-parameters" />
     </option>
   </component>
