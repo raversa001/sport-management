@@ -1,0 +1,5 @@
+org/sport/eurekaserver/Team.class
+org/sport/eurekaserver/EurekaServer.class
+org/sport/eurekaserver/TeamController.class
+org/sport/eurekaserver/EurekaServerApplication.class
+org/sport/eurekaserver/EurekaServerImpl.class
